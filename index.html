@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brainrot's</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap" rel="stylesheet">
+
+
+    <style>
+
+
+        body {
+            padding: 10px;
+            background-color: black;
+            font-family: 'Tagesschrift', sans-serif; 
+            background-size: cover;
+            background-position: center; /* Alinha a imagem no centro */
+            background-repeat: no-repeat;
+        }
+
+        .navbar-nav .nav-link {
+    color: #ecf0f1 !important;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    font-size: 1.3rem; 
+    font-weight: bold; 
+
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ecf0f1 !important;
+    padding-left: 15px;
+}
+
+
+.navbar-nav .nav-link:hover {
+    color: #f39c12 !important;
+}
+
+.navbar-toggler {
+    border-color: #ecf0f1;
+}
+
+#icon{
+    background-color: rgba(41, 37, 37, 0.432);
+
+}
+
+
+
+        h2 {
+            color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            border-bottom: 8px solid #ffffff;
+            padding-bottom: 5px;
+            font-weight: bold;
+
+        }
+
+
+
+
+        .card img {
+            height: 450px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .card {
+            text-align: justify;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            box-shadow: 0 0 25px rgba(255, 255, 255, 1);
+        }
+
+        .card2 {
+            box-shadow: 0 0 15px rgb(250, 250, 250);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .card2:hover {
+            box-shadow: 0 0 25px rgb(243, 239, 239);
+        }
+
+
+        .card2 img {
+            transition: filter 0.3s ease-in-out;
+        }
+
+        .card2 img:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+            transform: rotate(0.7deg);
+        }
+
+
+        #btn-topo {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 100;
+    background-color: #ffffff; /* vermelho */
+    color: rgb(15, 14, 14);
+    border: none;
+    border-radius: 50%;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none; /* Começa invisível */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: opacity 0.3s;
+}
+
+#btn-topo:hover {
+    background-color: #5c2424;
+}
+form label{
+    font-size: 25px;
+    font-weight: bold;  
+}
+
+
+
+footer {
+    /* background-color: #000000;  */
+    padding: 20px 40px;
+    color: #fff; /* texto branco */
+    
+    left: 0; /* Alinha à esquerda */
+    bottom: 0; /* Alinha à parte inferior */
+    width: 100%; /* Garante que o footer ocupe toda a largura da tela */
+    z-index: 10; /* Garante que o footer fique acima de outros elementos */
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul {
+    list-style: none;
+    display:flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    
+}
+
+footer ul li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 5px;
+}
+footer p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+audio{
+    width: 30%;
+    
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+.row > .col-4 {
+        flex: 0 0 50%;
+        max-width: 50%;   
+    }
+
+h2 {
+    font-size: 1.5rem;
+    padding: 15px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    margin: 0 5px;
+}
+
+.card img {
+    height: 350px; 
+}
+
+.card .card-title {
+    font-size: 1.2rem;
+}
+
+.card .card-text {
+    font-size: 0.95rem;
+}
+
+.card2 img:hover {
+    transform: scale(1.05); 
+}
+
+audio {
+    width: 60%; 
+}
+
+form label {
+    font-size: 20px;
+}
+
+#btn-topo {
+    bottom: 30px;
+    right: 15px;
+    font-size: 20px;
+    padding: 8px 16px;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+footer ul li img {
+    width: 30px;
+    height: 30px;
+}
+
+.carousel-item img {
+    height: auto;
+}
+}
+
+@media (min-width: 1025px) {
+    .col-custom {
+        flex: 0 0 auto;
+        width: 33.3333%;
+    }
+}
+
+
+    </style>
+
+
+
+</head>
+
+<body>
+    <script src="lib/bootstrap.bundle.min.js"></script>
+    <div class="container">
+        <header id="cabecalho">
+            <div class="navbar navbar-expand-lg">
+
+
+
+                <a class="navbar-brand" href="#menu">BRAINROT </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon" id="icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">INÍCIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#brainhot">BRAINROT'S</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#historia">HISTÓRIA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">CONTATE-NOS</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </header>
+    </div>
+
+
+    <div class="container">
+        <section id="inicio">
+        </section>
+        <div class="carousel slide" data-bs-ride="carousel" id="ads" data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button class="active" data-bs-target="#ads" data-bs-slide-to="0"></button>
+                <button class="" data-bs-target="#ads" data-bs-slide-to="1"></button>
+                <button class="" data-bs-target="#ads" data-bs-slide-to="2"></button>
+                <button class="" data-bs-target="#ads" data-bs-slide-to="3"></button>
+                <button class="" data-bs-target="#ads" data-bs-slide-to="4"></button>
+                <button class="" data-bs-target="#ads" data-bs-slide-to="5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/carrousel1.png" alt="tung tung tung sahur" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/carrousel2.png" alt="tung tung tung sahur" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/carrousel3.png" alt="tung tung tung sahur" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./img/carrousel4.png" alt="tung tung tung sahur" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./img/carrousel5.png" alt="tung tung tung sahur" class="d-block w-100">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./img/caurrosel6.png" alt="tung tung tung sahur" class="d-block w-100">
+                </div>
+            </div>
+
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#ads" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#ads" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="container py-5">
+        <h2 id="brainhot">BrainRot's</h2>
+
+        <div class="row">
+
+
+            <div class="col-12 col-md-6 col-custom py-2">
+                <article class="card text-bg-dark card2">
+                    <header class="card-header">
+
+                    </header>
+                    <img src="./img/tung tung tung tung tung tung tung tung tung  sahur.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Brainrot - Tung Sahur</h4>
+                        <p class="card-text">
+                            Conheça mais a história do Tung Sahur
+                        </p>
+                        <a href="#tungsahur" class="btn btn-primary">Leia a história</a>
+                    </div>
+
+                </article>
+            </div>
+
+
+
+
+
+
+            <div class="col-12 col-md-6 col-custom py-2">
+                <article class="card text-bg-dark card2">
+                    <header class="card-header">
+
+                    </header>
+                    <img src="./img/bailarina cappucina.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Brainrot - Ballerina Cappuccina</h4>
+                        <p class="card-text">
+                            Conheça mais a história da Ballerina Cappuccina
+                        </p>
+                        <a href="#ballerinacappuccina" class="btn btn-primary">Leia a história</a>
+                    </div>
+
+                </article>
+            </div>
+
+
+
+            <div class="col-12 col-md-6 col-custom py-2">
+                <article class="card text-bg-dark card2">
+                    <header class="card-header">
+
+                    </header>
+                    <img src="./img/chimpazine bananine.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">BrainRot - Chimpazine Bananine</h4>
+                        <p class="card-text">
+                            Conheça mais a história do Chimpazine Bananine
+                        </p>
+                        <a href="#chimpazine" class="btn btn-primary">Leia a história</a>
+                    </div>
+
+                </article>
+            </div>
+
+
+
+
+
+            <div class="col-12 col-md-6 col-custom py-2">
+                <article class="card text-bg-dark card2">
+                    <header class="card-header">
+
+                    </header>
+                    <img src="./img/lalari larirá.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Brainrot - Lirili Larila</h4>
+                        <p class="card-text">
+                            Conheça mais a história do Lirili Larila
+                        </p>
+                        <a href="#Lirili" class="btn btn-primary">Leia a história</a>
+                    </div>
+
+                </article>
+            </div>
+
+
+
+            <div class="col-12 col-md-6 col-custom py-2">
+                <article class="card text-bg-dark card2">
+                    <header class="card-header">
+
+                    </header>
+                    <img src="./img/Brr_Brr_Patapim.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Brainrot - Brr Brr Patapim</h4>
+                        <p class="card-text">
+                            Conheça mais a história do Brr Brr Patapim
+                        </p>
+                        <a href="#patapim" class="btn btn-primary">Leia a história</a>
+                    </div>
+
+                </article>
+            </div>
+
+
+
+            <div class="col-12 col-md-6 col-custom py-2">
+                <article class="card text-bg-dark card2">
+                    <header class="card-header">
+
+                    </header>
+                    <img src="./img/Trallallero Trallallà.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Brainrot - Trallallero Trallallà </h4>
+                        <p class="card-text">
+                            Conheça mais a história do Trallallero Trallallà
+                        </p>
+                        <a href="#trallallero" class="btn btn-primary">Leia a história</a>
+                    </div>
+
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-custom py-2">
+                <article class="card text-bg-dark card2">
+                    <header class="card-header">
+
+                    </header>
+                    <img src="./img/Imagem do WhatsApp de 2025-05-01 à(s) 22.59.24_888f3977.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Brainrot - Bombardiro Crocodillo</h4>
+                        <p class="card-text">
+                            Conheça mais a história do Bombardiono Crocodillo
+                        </p>
+                        <a href="#crocodilo" class="btn btn-primary">Leia a história</a>
+                    </div>
+
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-custom py-2">
+                <article class="card text-bg-dark card2">
+                    <header class="card-header">
+
+                    </header>
+                    <img src="./img/Imagem do WhatsApp de 2025-05-01 à(s) 23.01.48_c8b9b153.jpg">
+                    <div class="card-body">
+                        <h4 class="card-title">Brainrot - Bombombini Gusini </h4>
+                        <p class="card-text">
+                            Conheça mais a história do Bombombini Gusini
+                        </p>
+                        <a href="#gusini" class="btn btn-primary">Leia a história</a>
+                    </div>
+
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6 col-custom py-2">
+                <article class="card text-bg-dark card2">
+                    <header class="card-header">
+
+                    </header>
+                    <img src="./img/cachacini brasilini pingucini.png">
+                    <div class="card-body">
+                        <h4 class="card-title">Brainrot - Cachacini Brasilini Pingucini</h4>
+                        <p class="card-text">
+                            Conheça mais a história do Cachacini Brasilini Pingucini
+                        </p>
+                        <a href="#cachacini" class="btn btn-primary">Leia a história</a>
+                    </div>
+
+                </article>
+            </div>
+
+
+
+
+
+
+
+
+
+            <h2 id="historia">Historia dos Brainrot's</h2>
+
+            <div class="col-12 mb-4">
+                <div class="card text-bg-dark h-100">
+                    <div class="row g-0 align-items-stretch">
+                        <div class="col-md-5">
+                            <img src="./img/tung tung tung tung tung tung tung tung tung  sahur.jpg" alt="tung sahur"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body d-flex flex-column h-100">
+
+                                <h4 id="tungsahur" class="card-title">Tung Sahur</h4>
+                                <p class="card-text">
+                                    Tung Tung Tung Sahur é uma anomalia aterrorizante em forma de tambor de patrulha
+                                    noturna.
+
+                                    Diz a lenda que se você for chamado por Sahur três vezes e não responder, ele
+                                    aparecerá e o assombrará.
+
+                                    Seu som lembra o de um tambor, "tung tung tung". Foi descoberto pela primeira vez em
+                                    Pentungan Sahur Pos Ronda Malam.
+
+                                    Embora as pessoas o confundam com um "animal podridão cerebral italiano", na verdade
+                                    ele é um podridão cerebral indonésio.
+
+                                    Sahur é conhecido por empunhar um taco de madeira característico e pode evoluir para
+                                    uma segunda forma, como visto em sua luta com Brr brr Patapim . Ele é um dos
+                                    personagens com cérebro podre mais conhecidos e amados, conquistando o primeiro
+                                    lugar em muitos rankings exclusivos de animais com cérebro podre.
+                                </p>
+                                <p>
+                                    Na primeira batalha das Guerras Croco-Avianas , Tung Tung Tung Sahur é um
+                                    espectador, pois todos têm muito medo dele para convocá-lo ao campo de batalha.
+                                    Rumores afirmam que no final da segunda guerra, os crocos, liderados por Bombardiro
+                                    Crocodilo , tentaram convocá-lo depois que a tentativa de assassinato de Bombombini
+                                    Gusini por Tralelo Tralala falhou, como último recurso. Eles tiveram sucesso, e Tung
+                                    Tung Tung Sahur com Bombardiro Crocodilo atacou Lirili Larila e matou Bombombini
+                                    Gusini. Após a guerra, ele foi condenado à morte, mas escapou. Ele está atualmente
+                                    sendo caçado pelos Assassinos Cybertruck após um encontro com Piccione Macchina ,
+                                    que confirmou que Sahur é uma entidade glitch.
+                                </p>
+                                <audio src="audio/tungtungsahur.mp3" controls class="ms-auto"></audio>
+                       </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-12 mb-4">
+                <div class="card text-bg-dark h-100">
+                    <div class="row g-0 align-items-stretch">
+                        <div class="col-md-5">
+                            <img src="./img/bailarina cappucina.jpg" alt="Bailarina cappucina"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body d-flex flex-column h-100">
+
+                                <h4 id="ballerinacappuccina" class="card-title">Ballerina Cappuccina</h4>
+                                <p class="card-text">
+                                    No coração de uma charmosa cafeteria mágica chamada La Tazza Incantata, onde os
+                                    grãos de café sussurram segredos e os doces cantam canções de boas-vindas, vivia uma
+                                    criatura única: a Bailarina Cappucina.
+
+                                    Com o corpo elegante de uma bailarina clássica e uma cabeça em forma de xícara de
+                                    cappuccino, Cappucina não era uma simples criação do acaso. Ela nasceu de um desejo
+                                    profundo de alegria, feito por uma velha barista chamada Dona Rosa, que queria que
+                                    seus cafés trouxessem mais do que energia — ela queria que trouxessem encanto.
+                                </p>
+                                <p>
+
+                                    Todas as manhãs, quando o primeiro raio de sol tocava a vitrine da cafeteria,
+                                    Cappucina despertava. O vapor do leite quente em sua cabeça se misturava ao aroma de
+                                    café recém-passado, e ela começava sua rotina: uma dança delicada entre mesas e
+                                    cadeiras, seus passos suaves aquecendo os corações de todos que assistiam.
+
+                                    Mas Cappucina tinha um sonho maior. Queria dançar fora da cafeteria, nos palcos do
+                                    mundo. No entanto, ela sabia que sua magia só existia enquanto o café estivesse
+                                    quente — e o mundo lá fora era frio, incerto e corrido demais para esperar uma
+                                    xícara aquecer novamente.
+                                </p>
+                                <audio src="audio/balerinacappucina.mp3" controls class="ms-auto"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 mb-4">
+                <div class="card text-bg-dark h-100">
+                    <div class="row g-0 align-items-stretch">
+                        <div class="col-md-5">
+                            <img src="./img/chimpazine bananine.jpg" alt="Chimpazine Bananine"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body d-flex flex-column h-100">
+
+                                <h4 id="chimpazine" class="card-title">Chimpazine Bananine</h4>
+                                <p class="card-text">
+                                    Na selva de Zungalu, onde as árvores tocam o céu e os rios cantam melodias antigas,
+                                    existe uma lenda que os animais sussurram apenas em noites de lua cheia: a lenda de
+                                    Chimpazino Bananine, o protetor da fruta sagrada.
+
+                                    Chimpazino não era um macaco comum. Sua origem estava envolta em mistério. Dizem que
+                                    nasceu no coração de uma árvore milenar, quando um raio mágico atingiu uma bananeira
+                                    durante uma tempestade encantada. Do tronco surgiu ele — metade chimpanzé, metade
+                                    banana — com casca dourada, pelos verdes como musgo e olhos que viam além do tempo.
+                                </p>
+                                <p>
+                                    Apesar de sua aparência curiosa, Chimpazino era reverenciado por todas as criaturas
+                                    da floresta. Não apenas por sua força e inteligência, mas por sua missão: proteger o
+                                    Equilibanano — uma fruta lendária que mantinha o equilíbrio da vida no ecossistema
+                                    de Zungalu. Se alguém colhesse a fruta antes da hora certa, toda a floresta
+                                    murcharia.
+
+                                    Mas nem todos respeitavam a floresta...
+
+                                    Certo dia, um grupo de exploradores ambiciosos adentrou a selva, guiados por mapas e
+                                    ganância. Eles queriam o Equilibanano para vendê-lo como fonte de juventude. O chão
+                                    tremeu com suas máquinas, os pássaros fugiram em revoada, e os animais se esconderam
+                                    com medo.</p>
+                                    <audio src="audio/chimpazinibananini.mp3" controls class="ms-auto" class="ms-auto"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 mb-4">
+                <div class="card text-bg-dark h-100">
+                    <div class="row g-0 align-items-stretch">
+                        <div class="col-md-5">
+                            <img src="./img/lalari larirá.jpg" alt="Lirili Larila" class="img-fluid w-100 h-100"
+                                style="object-fit: cover;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body d-flex flex-column h-100">
+
+                                <h4 id="Lirili" class="card-title">Lirili Larila</h4>
+                                <p class="card-text">
+                                    Muito além dos desertos que conhecemos, onde o tempo não segue os ponteiros e os
+                                    relógios flutuam como balões, existe uma criatura rara, tão antiga quanto os
+                                    próprios grãos de areia: Lalari Larirá, o elefante-cacto que caminha entre os
+                                    segundos.
+
+                                    Lalari nasceu quando o tempo parou por um instante — não um minuto, não um dia, mas
+                                    apenas um suspiro. Foi nesse lapso silencioso que o deserto, cansado de ser
+                                    ignorado, decidiu criar um guardião. Uniu a força de um elefante, a resistência de
+                                    um cacto e os passos lentos de quem entende que tudo tem sua hora.
+                                </p>
+                                <p>
+                                    Com pernas espinhosas como colunas de saguaro e sandálias místicas que o protegem do
+                                    calor das decisões apressadas, Larirá caminha devagar, mas nunca para. Seu corpo é
+                                    lar para passarinhos do tempo, e em sua tromba repousam os ecos de eras esquecidas.
+
+                                    Ele aparece apenas para aqueles que perderam a noção do tempo — os apressados, os
+                                    ansiosos, os que vivem correndo e esquecem de viver. Larirá não fala, mas sua
+                                    presença ensina: o tempo não é um inimigo, é um aliado... desde que você aprenda a
+                                    pisar com calma.
+
+                                    Quando um viajante solitário se perde no deserto das preocupações, Larirá surge
+                                    entre os cactos, acompanhado de relógios flutuantes e ventos que sopram memórias.
+                                    Com um toque de sua tromba, ele desacelera os pensamentos e faz o viajante lembrar
+                                    que há beleza na pausa, sabedoria na espera e cura no passo lento.
+                                </p>
+                                <audio src="audio/liririlarirá.mp3" controls class="ms-auto"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mb-4">
+                <div class="card text-bg-dark h-100">
+                    <div class="row g-0 align-items-stretch">
+                        <div class="col-md-5">
+                            <img src="./img/Brr_Brr_Patapim.jpg" alt="Patapim" class="img-fluid w-100 h-100"
+                                style="object-fit: cover;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body d-flex flex-column h-100">
+
+                                <h4 id="patapim" class="card-title">Brr Brr Patapim</h4>
+                                <p class="card-text">
+                                    No coração da Floresta dos Sussurros, onde as árvores trocam segredos e o vento
+                                    canta canções antigas, vive uma criatura tão antiga quanto o primeiro broto do
+                                    mundo: Brr Brr Patapim, o gigante de pés-raízes e alma serena.
+
+                                    Com um nariz digno de histórias engraçadas e pés tão grandes que podem cobrir lagos
+                                    inteiros, Patapim caminha devagar pelas trilhas da floresta, carregando em seus
+                                    passos a memória viva do solo. Seus cabelos são ramos e suas pernas, troncos e
+                                    raízes entrelaçadas que se alimentam da terra, conectando-o a cada canto da
+                                    natureza.
+                                </p>
+                                <p>
+                                    Mas Patapim não nasceu assim. Ele era, há muito tempo, um macaco curioso chamado
+                                    Pim. Um dia, escalando a maior árvore da floresta em busca da fruta do eco — que
+                                    repetia os sentimentos de quem a comia —, Pim mordeu a fruta e ouviu sua própria
+                                    alma dizer:
+                                    "Quero parar de correr... e começar a crescer."
+
+                                    A floresta, ouvindo o desejo mais profundo de Pim, o transformou em seu guardião.
+                                    Assim surgiu Brr Brr Patapim — o som do vento (brr brr) e o som de seus passos
+                                    pesados (patapim) que fazem a terra vibrar.
+                                </p>
+                                <audio src="audio/prprpatabim.mp3" controls class="ms-auto"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-12 mb-4">
+                <div class="card text-bg-dark h-100">
+                    <div class="row g-0 align-items-stretch">
+                        <div class="col-md-5">
+                            <img src="./img/Trallallero Trallallà.jpg" alt="Trallallero Trallallà"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body d-flex flex-column h-100">
+
+                                <h4 id="trallallero" class="card-title">Trallallero Trallallà</h4>
+                                <p class="card-text">
+                                    Numa manhã de maré alta e céu sem nuvens, as ondas sussurraram algo novo à costa:
+                                    Trallallero Trallallà, o tubarão com pernas de atleta e tênis de corrida, que trocou
+                                    os mares profundos pela liberdade da areia quente.
+
+                                    Ninguém sabe exatamente como isso aconteceu. Uns dizem que Trallallero era o tubarão
+                                    mais curioso do oceano, sempre olhando para a praia e se perguntando como seria
+                                    caminhar, saltar e... dançar. Outros juram que ele ganhou suas pernas ao vencer uma
+                                    aposta contra Netuno em uma corrida submarina.
+                                </p>
+                                <p>
+                                    Mas a verdade é que Trallallero nasceu do desejo de explorar o mundo acima do nível
+                                    do mar. Com suas poderosas pernas musculosas e seus tênis azuis turbinados, ele
+                                    agora corre pelas praias, deixando pegadas profundas e admiradores por onde passa.
+                                    Diferente de outros tubarões, ele não caça — ele participa de maratonas.
+
+                                    Sim, maratonas. E ele é imbatível! Seus pulmões foram substituídos por um sistema de
+                                    resfriamento natural que o mantém hidratado mesmo sob o sol escaldante. Seu sorriso,
+                                    cheio de dentes afiados, assusta os desavisados, mas logo todos percebem que
+                                    Trallallero é só... um cara do bem, apaixonado por esportes e um pouco exibido.
+                                </p>
+                                <audio src="audio/tralalelotralala.mp3" controls class="ms-auto"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mb-4">
+                <div class="card text-bg-dark h-100">
+                    <div class="row g-0 align-items-stretch">
+                        <div class="col-md-5">
+                            <img src="./img/Imagem do WhatsApp de 2025-05-01 à(s) 22.59.24_888f3977.jpg" alt="Trallallero Trallallà"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body d-flex flex-column h-100">
+
+                                <h4 id="crocodilo" class="card-title">Bombardiono Crocodillo</h4>
+                                <p class="card-text">
+                                    Há muitos anos, quando as guerras deixaram de ser travadas com exércitos e passaram a ser disputadas por máquinas de poder absoluto, nasceu a arma mais temida do mundo tropical: o Bombardino Crocodillo.
+
+                                    Diferente de qualquer avião, o Bombardino não foi construído em laboratório nem criado por cientistas. Diz a lenda que ele nasceu de um ritual proibido, quando um general enlouquecido tentou unir a força bruta de um crocodilo do Pantanal com um bombardeiro americano abandonado da Segunda Guerra.
+                                    
+                                    No meio de uma tempestade elétrica, o monstro despertou: um avião com pele escamosa, dentes de aço afiados como navalhas e olhos que viam além das nuvens. Suas turbinas rugiam como trovões, e a cada bombardeio ele soltava granadas que transformavam cidades em pântanos radioativos.
+                                    
+                                    O Bombardino Crocodillo tinha inteligência. Escolhia alvos. Gostava de calor, cheiro de carne grelhada e caos.
+                                </p>
+                                <p>
+                                    Ele voava por cima de praias lotadas, florestas intocadas e cidades cheias de luzes, sempre com a boca aberta, como se saboreasse o pavor.
+
+                                    Mas o que ninguém sabia era que ele não era mal por natureza. Ele foi preso em seu próprio corpo metálico, aprisionado num pesadelo de guerra pelo tal general. E no fundo daqueles olhos de crocodilo, havia um pedido de socorro.
+                                    
+                                    Então surgiu ela: Dra. Solange Brejo, engenheira biomecânica e defensora dos animais híbridos. Depois de anos estudando ruídos nas correntes de vento, ela decifrou os "gritos" do Bombardino. Usando um parapente movido a energia solar e coragem de sobra, ela pousou sobre o dorso do monstro e... conversou com ele.
+                                    
+                                    Não com palavras, mas com sons, sinais e música. Tocou um berrante tecnológico com notas de paz, e o Crocodillo tremeu. Chorou. Parou de voar. Suas bombas caíram no mar sem explodir, e pela primeira vez, pousou sem destruir.
+                                    
+                                    Desde então, o Bombardino Crocodillo voa como protetor dos céus do sul global, interceptando satélites espiões, afastando drones de guerra e cuspindo rajadas sonoras que confundem radares.
+                                    
+                                    Alguns ainda acham que ele é um monstro.
+                                </p>
+                                <audio src="audio/bombardinocrocodilo.mp3" controls class="ms-auto"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mb-4">
+                <div class="card text-bg-dark h-100">
+                    <div class="row g-0 align-items-stretch">
+                        <div class="col-md-5">
+                            <img src="./img/Imagem do WhatsApp de 2025-05-01 à(s) 23.01.48_c8b9b153.jpg" alt="Trallallero Trallallà"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body d-flex flex-column h-100">
+
+                                <h4 id="gusini" class="card-title">Bombombini Gusini</h4>
+                                <p class="card-text">
+                                    Muito antes dos drones e caças invisíveis, havia uma lenda nos céus gelados do norte: Bombardino Gusini, a gansa de guerra, um híbrido criado não pela ciência, mas por um erro cósmico durante uma tempestade magnética e um teste militar fracassado.
+
+                                    Gusini nasceu quando um míssil experimental colidiu com uma revoada de gansos migratórios durante um eclipse total. Uma explosão abriu uma fenda no céu, e dela saiu ela: com penas de titânio, motores de jato nos flancos, e o olhar sereno de quem já sobreviveu a muitos invernos.
+                                    
+                                    Ao contrário do temido Bombardino Crocodillo, Gusini era calma, precisa, e voava em formação com caças como se fosse uma comandante aérea de elite. Seu corpo era blindado como um tanque, mas seu canto — sim, ela cantava — desorientava radares e fazia pilotos dormirem em pleno voo, como um feitiço musical.
+                                    
+                                    Seu propósito era claro: interferir em guerras antes que elas começassem. Onde havia tensão, Gusini surgia. Sobrevoava bases militares, desativava bombas com seu sistema biotecnológico de precisão e deixava um único rastro: uma pena metálica no chão com a inscrição "Paz não é fraqueza".
+                                    
+                                </p>
+                                <p>
+                                    Mas nem todos gostavam dela. O consórcio armamentista conhecido como Vento Negro a via como ameaça. Tentaram capturá-la com aviões supersônicos, satélites armados e até redes de energia magnética. Nada funcionava.
+
+                                    Em uma das batalhas mais lendárias, chamada "A Revoada de Fogo", Gusini enfrentou um esquadrão de 17 jatos. Com movimentos graciosos, desviou de mísseis, destruiu alvos sem matar pilotos e pousou sobre um porta-aviões apenas para desligar seu sistema de lançamento.
+
+                                    Após isso, o mundo começou a mudar. Líderes começaram a ouvir antes de atacar. E onde Gusini passava, brotavam tratados e cessavam tiros.
+
+                                    Hoje, ela não aparece com frequência.
+                                </p>
+                                <audio src="audio/bomboziniguini.mp3" controls class="ms-auto"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mb-4">
+                <div class="card text-bg-dark h-100">
+                    <div class="row g-0 align-items-stretch">
+                        <div class="col-md-5">
+                            <img src="./img/carrousel4.png" alt="Cachacini Brasilini"
+                                class="img-fluid w-100 h-100" style="object-fit: cover;">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body d-flex flex-column h-100">
+
+                                <h4 id="cachacini" class="card-title">Cachacini Brasilini Pingucini</h4>
+                                <p class="card-text">
+                                    Em um vilarejo quente e empoeirado do sertão brasileiro, onde o sol frita os pensamentos e a sombra é artigo de luxo, nasceu uma lenda conhecida por todos os botecos da região: Cachasini Brasilini, o espírito mais forte da cachaça e o andarilho das vielas.
+
+                                    Ninguém sabe ao certo como ele surgiu. Alguns dizem que foi um experimento que deu errado numa fábrica de aguardente. Outros juram que ele é a alma embriagada de um boêmio que tomou tanta cachaça que se fundiu com a garrafa. A verdade, porém, está em um acontecimento inusitado:
+
+                                    Certo dia, uma garrafa de "Puraína do Sertão" foi esquecida debaixo de um sol escaldante, em cima de uma pedra de rio fervendo. A mistura do calor, da energia do sertão e da essência da cachaça fermentou tanto que... ganhou vida! Da garrafa surgiu um ser barrigudo, de olhos arregalados e expressão eternamente surpresa. Suas pernas metálicas eram feitas de abridores de garrafa e molas de cadeira velha, e suas mãos enrugadas lembravam as de um velho bebum com mil histórias pra contar.
+                                </p>
+                                <p>
+                                    Ele vestia um short jeans apertado — encontrado num varal de um lavrador distraído — e saiu andando pelo mundo, cambaleando com estilo. Seu nome? Cachasini Brasilini, defensor da pinga boa, inimigo da ressaca e protetor dos bebuns de coração puro.
+
+                                    Cachasini não fala muito, mas quando fala, suas palavras vêm com cheiro de cana e gosto de sabedoria embriagada:
+
+                                    “Quem nunca dançou forró de chinelo com o copo na mão… não sabe o que é viver!”
+
+
+                                    
+                                </p>
+                                <audio src="audio/Cachacini Brasilini Pingucini.mp3" controls class="ms-auto"></audio>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <button id="btn-topo" title="Voltar ao topo">↑</button>
+
+
+<div class="container" id="contato">
+    <h2 class="text-white">Contate-nos</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <form class="text-white">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome:</label>
+                    <input type="text" class="form-control bg-dark text-white border-light" id="nome" placeholder="Seu nome">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail:</label>
+                    <input type="email" class="form-control bg-dark text-white border-light" id="email" placeholder="seuemail@exemplo.com">
+                </div>
+                <div class="mb-3">
+                    <label for="mensagem" class="form-label">Mensagem:</label>
+                    <textarea class="form-control bg-dark text-white border-light" id="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
+       
+        <footer>
+            <div class="container container-flex">
+                <p>2025 &copy; EBAC BrainRot'<s></s> - Todos os direitos reservados</p>
+                <ul class="container-flex">
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img src="./icones/facebook.png" alt="Facebook">
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="https://www.instagram.com/johnymarquesg2?igsh=ZXJqbHBwdXVscmIy" target="_blank">
+                            <img src="./icones/instagram.png" alt="instagram">
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a href="https://www.youtube.com/" target="_blank">
+                            <img src="./icones/youtube.png" alt="Youtube">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+
+
+
+        <script>
+               const btnTopo = document.getElementById("btn-topo");
+
+window.onscroll = function () {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        btnTopo.style.display = "block";
+    } else {
+        btnTopo.style.display = "none";
+    }
+};
+
+btnTopo.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+const audios = document.querySelectorAll('audio');
+
+audios.forEach(audio => {
+    audio.addEventListener('play', () => {
+        audios.forEach(otherAudio => {
+            if (otherAudio !== audio) {
+                otherAudio.pause();
+            }
+        });
+    });
+});
+        </script>
+
+</body>
+
+</html>
